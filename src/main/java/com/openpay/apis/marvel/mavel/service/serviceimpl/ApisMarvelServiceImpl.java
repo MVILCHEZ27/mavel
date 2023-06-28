@@ -20,6 +20,7 @@ public class ApisMarvelServiceImpl implements ApisMarvelService {
     }
 
     public Object getCharacterById(String url, String id) {
+
         String URL = getCharacterByIdApi(url, id);
         RestTemplate restTemplate = new RestTemplate();
         Object character = restTemplate.getForObject(URL, Object.class);
